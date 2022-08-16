@@ -1,0 +1,44 @@
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+
+bool isPalindromo(char palavra[]) {
+  int tamanho = strlen(palavra);
+  bool valido = false;
+  int j=1;
+  for (int i = 0; i <= tamanho / 2; i++) {
+    if (palavra[i] == palavra[tamanho - j]) {
+      valido = true;
+    }
+     j++;
+  }
+  return valido;
+}
+
+bool isFIM(char palavra[]) {
+  if ((palavra[0] == 'F') && (palavra[1] == 'I') && (palavra[2] == 'M'))
+    return true;
+  else
+    return false;
+}
+
+void lePalavras(char palavra[]) {
+  // printf("\nDigite a palavra: ");
+  fgets(palavra, 1000, stdin);
+  // gets(palavra);
+}
+
+int main(void) {
+  char palavra[1000];
+  lePalavras(palavra);
+
+  while (!isFIM(palavra)) {
+    if (isPalindromo(palavra))
+      printf("\nSIM");
+    else
+      printf("\nNAO");
+    lePalavras(palavra);
+  }
+
+  return 0;
+}
