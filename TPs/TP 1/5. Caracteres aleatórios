@@ -1,0 +1,48 @@
+import java.util.Random;
+
+public class exercicio1 {
+
+    public static boolean isFim(String s){
+        return (s.length() == 3 && s.charAt(0) == 'F' && s.charAt(1) == 'I' && s.charAt(2) == 'M');
+     }
+
+    // public static String novasFrases (String s){
+    //     Random gerador = new Random();
+    //     gerador.setSeed(4);
+       
+        
+    //     char letra1 = ((char) ('a'+Math.abs(gerador.nextInt()) % 26));
+    //     //char letra2 = ((char) ('a'+Math.abs(gerador.nextInt()) % 26));
+
+    //     String newString = s.replace ('a', letra1);
+
+    //     return newString;
+
+    // }
+
+    public static void main(String[] args) {
+       
+
+        String[] entrada = new String[1000];
+        int numEntrada = 0;
+  
+        //Leitura da entrada padrao
+        do {
+           entrada[numEntrada] = MyIO.readLine();
+        } while (isFim(entrada[numEntrada++]) == false);
+        numEntrada--;   //Desconsiderar ultima linha contendo a palavra FIM
+  
+        Random gerador = new Random();
+        gerador.setSeed(4);
+
+        char letra1, letra2;
+        
+          for(int i = 0; i < numEntrada; i++){
+            letra1 = ((char) ('a'+Math.abs(gerador.nextInt()) % 26));
+            letra2 = ((char) ('a'+Math.abs(gerador.nextInt()) % 26));
+            String newString = entrada[i].replace (letra2, letra1);
+            System.out.println(newString);
+        }
+     }
+    }
+
