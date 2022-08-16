@@ -1,0 +1,29 @@
+//ERRO
+
+class CiframentoDeCesar {
+    public static String novasFrases(String s){
+        
+        String novaFrase ="";
+        int j=0;
+        while (j<s.length()){
+            
+            char oldChar = s.charAt(j);
+            
+            int charInt = oldChar - 0; //transformando o char em int
+            int newInt = charInt + 3;  //deslocando 3 caracteres
+
+            char newChar = (char) newInt; //transformando o int em char de novo
+           novaFrase = s.replace(oldChar, newChar);
+           j++;
+           
+        }
+        return novaFrase;
+    }
+
+
+    public static void main (String[] args){
+        String Gabriela = "Gabriela Colen";
+        
+         System.out.println("Nova: " + novasFrases(Gabriela));
+    }
+}
