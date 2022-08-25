@@ -1,0 +1,47 @@
+public class ciframentoRecursivo {
+
+  public static boolean saoIguais (String s1, String s2){
+    boolean valido = true; 
+    if(s1.length() != s2.length()){ 
+      valido = false;
+    }
+    else{
+      for (int i=0; i<s1.length(); i++){ 
+        if(s1.charAt(i) != s2.charAt(i)){
+          valido = false;
+          i = s1.length(); 
+        }
+      }
+    }
+    return valido;
+  }
+
+    public static String codificarRecursivo (String s){
+        return codificarRecursivo(s, 0);
+    }
+
+    public static String codificarRecursivo (String s, int i){
+        String codificada = "";
+                if (i<=s.length()){
+                    codificada = (codificarRecursivo (s, i+1) + ((char) (s.charAt(i) + 3)));
+                }
+        return codificada;
+        }
+
+    public static void main (String [] args){
+        String [] palavra = new String [1000];
+        int npalavra = 0;
+       
+       do {
+        palavra [npalavra] = MyIO.readLine ();
+        npalavra = npalavra + 1;
+       }while ( saoIguais(palavra [npalavra-1],"FIM") == false);
+
+       npalavra--; //desconsiderar a ultima
+
+       for (int i = 0; i<npalavra; i++) {
+        System.out.println ("NOVA = " + codificarRecursivo(palavra[i]));
+        }
+    }
+}
+
