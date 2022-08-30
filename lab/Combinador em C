@@ -6,11 +6,13 @@
     char* concatena(char* s1, char* s2);
     size_t length(char* s);
     int main () {
+    
+    //while(!feof(stdin){
         char* s1 = (char*)malloc(sizeof(char) * 1000);
         char* s2 = (char*)malloc(sizeof(char) * 1000);
         scanf(" %s%s", s1, s2);
         printf("%s\n", concatena(s1, s2));
-
+     // }
         return 0;
     }
 
