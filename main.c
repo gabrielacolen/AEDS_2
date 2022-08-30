@@ -1,0 +1,41 @@
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <stdbool.h>
+    #include <string.h>
+
+    char* concatena(char* s1, char* s2);
+    size_t length(char* s);
+    int main () {
+        char* s1 = (char*)malloc(sizeof(char) * 1000);
+        char* s2 = (char*)malloc(sizeof(char) * 1000);
+        scanf(" %s%s", s1, s2);
+        printf("%s\n", concatena(s1, s2));
+
+        return 0;
+    }
+
+    char* concatena(char* s1, char* s2) {
+        int len1 = length(s1),
+            len2 = length(s2),
+            lenRes = len1 + len2;
+        char* res = (char*)malloc(sizeof(char) * (lenRes + 2));
+
+        for(int i = 0, j = 0; i < lenRes; i++, j++) {
+            if(j >= len1) res[i] = s2[j];
+            else if(j >= len2) res[i] = s1[j];
+            else {
+                res[i++] = s1[j];
+                res[i] = s2[j];
+            }
+        }
+
+        res[lenRes] = '\0';
+        return res;
+    }
+
+    size_t length(char* s) {
+        int i = 0;
+        if(s != NULL)
+            while(s[i] != '\0') i++;
+        return i;
+    }
