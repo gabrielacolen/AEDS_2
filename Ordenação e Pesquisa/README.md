@@ -1,3 +1,8 @@
+# Pesquisa Sequencial
+Pesquisa sequencialmente até encontrar a chave procurada e ao final emite a resposta sucesso/fracasso.
+
+
+
 # Quicksort
 Algoritmo de ordenação do tipo divisão e conquista.
 ### Funcionamento
