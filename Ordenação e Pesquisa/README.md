@@ -18,7 +18,7 @@ Aplica o paradigma de divisão e conquista, o que reduz significamente o univers
 **Melhor caso:** f(n)=1 (o elemento está no meio do vetor)
 **Pior caso:** f(n) = 2 (lg n) (o elemento está na última posição de procura ou não está no vetor - teste no if e no else if, por isso a multiplicação por 2)
 
-*a operação mais relevante é a comparação entre elementos
+*a operação mais relevante é a comparação entre elementos*
 
 # Quicksort
 Algoritmo de ordenação do tipo divisão e conquista.
