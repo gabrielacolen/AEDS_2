@@ -1,0 +1,5 @@
+#QuickSort
+Algoritmo de ordenação do tipo divisão e conquista.
+
+###Funcionamento
+O array será dividido em 2 partes que serão ordenadas independentemente e o resultado será a junção de tudo.
