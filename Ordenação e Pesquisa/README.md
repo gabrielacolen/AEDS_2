@@ -1,11 +1,12 @@
 # Pesquisa Sequencial
-Pesquisa sequencialmente até encontrar a chave procurada e ao final emite a resposta sucesso/fracasso.
-
+Pesquisa sequencialmente até encontrar a chave procurada e ao final emite a resposta sucesso/fracasso. 
+### Análise de Custo
+**Melhor caso:** f(n)=1 (o elemento está no primeira posição)
+**Pior caso:** f(n) = n (o elemento está na última posição ou não está no vetor)
 
 
 # Quicksort
 Algoritmo de ordenação do tipo divisão e conquista.
-### Funcionamento
 O array será dividido em duas partes, os quais serão ordenados independentemente. A parte da esquerda vai ter elementos menores ou iguais ao pivô e a parte da direita vai ter elementos maiores ou igauis o pivô. A escolha do pivô pode ser arbitraria, no caso dos exemplos de AEDS 2, o pivô será o número do meio do vetor.
 ### Análise de Comparações
 
